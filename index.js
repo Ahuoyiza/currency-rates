@@ -17,4 +17,8 @@ app.get('/', (request, response) =>
     return response.send('Hey there!, Check currency rates')
 })
 
-app.listen(5678, () => console.log('Listening on port 5678.....'));
+
+const PORT = process.env.PORT || 5678;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
